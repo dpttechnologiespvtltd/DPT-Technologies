@@ -1,0 +1,18 @@
+/* DPT Technologies — light theme styles are centralized in src/theme.css */
+@import "../../theme.css";
+
+.footer-social{
+  display:grid !important;
+  place-items:center !important;
+  width:42px !important;
+  height:42px !important;
+  border-radius:12px !important;
+  color:#31517c !important;
+  transition:transform .25s ease, box-shadow .25s ease, color .25s ease, background .25s ease !important;
+}
+.footer-social svg{width:20px;height:20px;display:block}
+.footer-social:hover{
+  color:#1769ff !important;
+  transform:translateY(-4px) scale(1.04) !important;
+  box-shadow:0 12px 24px rgba(39,72,130,.16) !important;
+}

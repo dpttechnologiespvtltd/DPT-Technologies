@@ -1,0 +1,345 @@
+/* ===== HERO PHOTO LAYER — robust V4 fix ===== */
+.hero{
+  position:relative !important;
+  background:#071a31 !important;
+  overflow:hidden !important;
+}
+
+.hero-background-image{
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  max-width:none !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+  display:block !important;
+  z-index:-3 !important;
+}
+
+.hero-image-overlay{
+  position:absolute !important;
+  inset:0 !important;
+  z-index:-2 !important;
+  background:
+    linear-gradient(90deg,rgba(3,16,35,.96) 0%,rgba(4,22,45,.88) 30%,rgba(5,27,52,.58) 58%,rgba(5,19,36,.28) 100%),
+    linear-gradient(180deg,rgba(3,14,31,.28) 0%,rgba(3,17,34,.12) 45%,rgba(3,14,31,.62) 100%) !important;
+  pointer-events:none !important;
+}
+
+.hero-grid{
+  z-index:-1 !important;
+  opacity:.10 !important;
+}
+
+/* DPT Technologies — Hero redesign with real technology background image */
+
+.hero{
+  min-height:clamp(700px,92vh,900px) !important;
+  padding:96px 5.5% 34px !important;
+  display:flex;
+  align-items:center;
+  isolation:isolate;
+  background-image:
+    linear-gradient(90deg, rgba(4,18,38,.96) 0%, rgba(5,24,48,.91) 34%, rgba(7,31,57,.70) 60%, rgba(5,24,46,.42) 100%),
+    url("../../assets/hero-coding.jpg") !important;
+  background-size:cover !important;
+  background-position:center right !important;
+  background-repeat:no-repeat !important;
+  color:#fff;
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:
+    radial-gradient(circle at 78% 24%,rgba(34,161,255,.22),transparent 25%),
+    radial-gradient(circle at 82% 78%,rgba(108,73,220,.18),transparent 27%);
+  pointer-events:none;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  width:520px;
+  height:520px;
+  right:-180px;
+  top:-150px;
+  border-radius:50%;
+  background:rgba(25,133,255,.16);
+  filter:blur(80px);
+  z-index:-1;
+  pointer-events:none;
+}
+
+.hero-grid{
+  opacity:.14 !important;
+  background-image:
+    linear-gradient(rgba(113,198,255,.18) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(113,198,255,.18) 1px,transparent 1px) !important;
+  background-size:56px 56px !important;
+  mask-image:linear-gradient(to bottom,#000 0%,transparent 92%);
+  z-index:0;
+}
+
+.hero-container{
+  z-index:3 !important;
+  grid-template-columns:1fr .86fr !important;
+  gap:35px !important;
+}
+
+.hero-content{
+  max-width:720px !important;
+}
+
+.hero-badge{
+  color:#73d9ff !important;
+  background:rgba(8,30,55,.66) !important;
+  border-color:rgba(104,201,255,.34) !important;
+  box-shadow:0 12px 35px rgba(0,0,0,.20) !important;
+  backdrop-filter:blur(12px);
+}
+
+.hero h1{
+  color:#fff !important;
+  text-shadow:0 8px 30px rgba(0,0,0,.24);
+}
+
+.hero-highlight{
+  background:linear-gradient(90deg,#64d9ff 0%,#72a8ff 45%,#b794ff 100%) !important;
+  -webkit-background-clip:text !important;
+  background-clip:text !important;
+}
+
+.hero-description{
+  color:rgba(235,244,255,.78) !important;
+  max-width:620px !important;
+}
+
+.hero-primary-button{
+  box-shadow:0 16px 36px rgba(24,113,236,.30) !important;
+}
+
+.hero-secondary-button{
+  background:rgba(7,27,50,.68) !important;
+  border-color:rgba(157,204,241,.32) !important;
+  color:#edf7ff !important;
+  backdrop-filter:blur(12px);
+}
+
+.hero-secondary-button:hover{
+  background:rgba(15,45,76,.82) !important;
+  color:#fff !important;
+  border-color:rgba(112,210,255,.55) !important;
+}
+
+.hero-trust{
+  color:rgba(222,239,255,.64) !important;
+}
+
+.hero-trust span:before{
+  color:#4ed8ff !important;
+}
+
+.hero-visual{
+  min-height:440px !important;
+}
+
+/* Let the supplied real photograph be the main visual instead of duplicating it as a card. */
+.hero-tech-image,
+.hero-tech-photo,
+.hero-core{
+  display:none !important;
+}
+
+.hero-orbit{
+  border-color:rgba(102,197,255,.18) !important;
+}
+
+.hero-floating-card{
+  background:rgba(7,27,49,.76) !important;
+  border:1px solid rgba(139,207,247,.28) !important;
+  color:#eef8ff !important;
+  box-shadow:0 18px 48px rgba(0,0,0,.28) !important;
+  backdrop-filter:blur(14px);
+}
+
+.hero-floating-card svg{
+  color:#65d9ff !important;
+}
+
+.hero-floating-card span{
+  color:rgba(220,239,255,.62) !important;
+}
+
+.hero-floating-card:hover{
+  transform:translateY(-5px) !important;
+  border-color:rgba(100,215,255,.55) !important;
+}
+
+.card-ai{
+  top:14%;
+  left:1%;
+}
+
+.card-code{
+  right:0;
+  top:38%;
+}
+
+.card-cloud{
+  left:8%;
+  bottom:13%;
+}
+
+.hero-scroll{
+  color:rgba(220,239,255,.58) !important;
+  z-index:4;
+}
+
+.hero-scroll-line{
+  background:linear-gradient(90deg,#4fd7ff,#9d7bff) !important;
+}
+
+/* Keep the navbar readable over the photographic hero while preserving the logo. */
+.navbar{
+  background:rgba(218,230,243,.94) !important;
+}
+
+@media(max-width:900px){
+
+  .hero{
+    min-height:760px !important;
+    padding:96px 5% 54px !important;
+    background-position:60% center !important;
+  }
+
+  .hero-container{
+    grid-template-columns:1fr !important;
+  }
+
+  .hero-visual{
+    min-height:260px !important;
+    margin-top:-12px;
+  }
+
+  .hero-floating-card{
+    transform:scale(.9);
+  }
+
+  .card-ai{
+    left:4%;
+  }
+
+  .card-code{
+    right:3%;
+  }
+
+  .card-cloud{
+    left:12%;
+    bottom:5%;
+  }
+}
+
+@media(max-width:560px){
+
+  .hero{
+    min-height:760px !important;
+    padding:92px 5% 46px !important;
+    background-position:62% center !important;
+  }
+
+  .hero h1{
+    font-size:clamp(2.55rem,12vw,4rem) !important;
+  }
+
+  .hero-description{
+    font-size:.9rem !important;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .hero-primary-button,
+  .hero-secondary-button{
+    width:100%;
+    justify-content:center;
+  }
+
+  .hero-visual{
+    min-height:220px !important;
+  }
+
+  .hero-floating-card{
+    transform:scale(.78);
+  }
+
+  .card-ai{
+    left:-9%;
+    top:5%;
+  }
+
+  .card-code{
+    right:-10%;
+    top:34%;
+  }
+
+  .card-cloud{
+    left:-5%;
+    bottom:-2%;
+  }
+
+  .hero-scroll{
+    display:none;
+  }
+}
+
+@media(max-width:900px){
+
+  .hero-background-image{
+    object-position:58% center !important;
+  }
+
+  .hero-image-overlay{
+    background:linear-gradient(
+      180deg,
+      rgba(3,16,35,.78) 0%,
+      rgba(4,22,45,.70) 52%,
+      rgba(3,15,31,.84) 100%
+    ) !important;
+  }
+}
+
+@media(max-width:560px){
+
+  .hero-background-image{
+    object-position:61% center !important;
+  }
+}
+
+/* Final hero readability patch */
+
+.hero .hero-floating-card strong{
+  color:#17233a !important;
+}
+
+.hero .hero-floating-card span{
+  color:#5b6c84 !important;
+}
+
+.hero .hero-floating-card svg{
+  color:#1769ff !important;
+}
+
+.hero .hero-orbit{
+  border-width:2px !important;
+  opacity:1 !important;
+}
+
+.hero .hero-core{
+  color:#1769ff !important;
+}
