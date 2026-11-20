@@ -13,7 +13,7 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 
-import "./Industries.css";
+import "./industries.css";
 
 const industries = [
   {
